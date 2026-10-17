@@ -10,10 +10,15 @@ import Detail from "./components/Detail";
 import Quiz from "./components/Quiz";
 import Profile from "./components/Profile";
 
+import SystemScanner from "./components/SystemScanner";
+import ModelEvaluation from "./components/ModelEvaluation";
+
 const PAGE_TITLES: Record<string, string> = {
   dash:   "Dashboard",
+  sys:    "System Security & Malware Scanner",
   url:    "URL Scanner",
   file:   "File Analyzer",
+  eval:   "Model Benchmark & Evaluation",
   hist:   "History",
   quiz:   "Awareness Quiz",
   me:     "Profile",
@@ -58,8 +63,10 @@ export default function App() {
   // ── Authenticated: render page content ──
   const pages: Record<string, ReactNode> = {
     dash:   <Dashboard open={openDetail} />,
+    sys:    <SystemScanner />,
     url:    <Scanner kind="url" />,
     file:   <Scanner kind="file" />,
+    eval:   <ModelEvaluation />,
     hist:   <History open={openDetail} />,
     detail: <Detail id={detailId} />,
     quiz:   <Quiz />,

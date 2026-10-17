@@ -1,0 +1,359 @@
+{
+  "version": "2.0.0",
+  "trained_at": "2026-10-16T07:08:48.903429+00:00",
+  "selected": "ExtraTrees",
+  "selected_model": "ExtraTrees",
+  "dataset_report": {
+    "raw_rows": 3000,
+    "missing_dropped": 0,
+    "unknown_labels_dropped": 0,
+    "duplicates_removed": 0,
+    "invalid_urls_dropped": 0,
+    "clean_samples": 3000,
+    "class_counts": {
+      "1": 1500,
+      "0": 1500
+    }
+  },
+  "data_report": {
+    "raw_rows": 3000,
+    "missing_dropped": 0,
+    "unknown_labels_dropped": 0,
+    "duplicates_removed": 0,
+    "invalid_urls_dropped": 0,
+    "clean_samples": 3000,
+    "class_counts": {
+      "1": 1500,
+      "0": 1500
+    }
+  },
+  "splits": {
+    "train": 1800,
+    "validation": 600,
+    "test": 600
+  },
+  "validation": {
+    "LogisticRegression": {
+      "accuracy": 0.995,
+      "precision": 1.0,
+      "recall": 0.99,
+      "f1": 0.995,
+      "false_positive_rate": 0.0,
+      "false_negative_rate": 0.01,
+      "confusion_matrix": {
+        "tn": 300,
+        "fp": 0,
+        "fn": 3,
+        "tp": 297
+      },
+      "sample_count": 600,
+      "inference_latency_ms_per_sample": 0.0048,
+      "roc_auc": 0.9973,
+      "pr_auc": 0.998,
+      "train_duration_s": 0.025
+    },
+    "DecisionTree": {
+      "accuracy": 0.995,
+      "precision": 1.0,
+      "recall": 0.99,
+      "f1": 0.995,
+      "false_positive_rate": 0.0,
+      "false_negative_rate": 0.01,
+      "confusion_matrix": {
+        "tn": 300,
+        "fp": 0,
+        "fn": 3,
+        "tp": 297
+      },
+      "sample_count": 600,
+      "inference_latency_ms_per_sample": 0.0046,
+      "roc_auc": 0.995,
+      "pr_auc": 0.9962,
+      "train_duration_s": 0.017
+    },
+    "RandomForest": {
+      "accuracy": 0.9933,
+      "precision": 1.0,
+      "recall": 0.9867,
+      "f1": 0.9933,
+      "false_positive_rate": 0.0,
+      "false_negative_rate": 0.0133,
+      "confusion_matrix": {
+        "tn": 300,
+        "fp": 0,
+        "fn": 4,
+        "tp": 296
+      },
+      "sample_count": 600,
+      "inference_latency_ms_per_sample": 0.0781,
+      "roc_auc": 0.9977,
+      "pr_auc": 0.9986,
+      "train_duration_s": 0.36
+    },
+    "ExtraTrees": {
+      "accuracy": 0.9967,
+      "precision": 1.0,
+      "recall": 0.9933,
+      "f1": 0.9967,
+      "false_positive_rate": 0.0,
+      "false_negative_rate": 0.0067,
+      "confusion_matrix": {
+        "tn": 300,
+        "fp": 0,
+        "fn": 2,
+        "tp": 298
+      },
+      "sample_count": 600,
+      "inference_latency_ms_per_sample": 0.0983,
+      "roc_auc": 0.9984,
+      "pr_auc": 0.9989,
+      "train_duration_s": 0.264
+    },
+    "HistGradientBoosting": {
+      "accuracy": 0.99,
+      "precision": 0.9933,
+      "recall": 0.9867,
+      "f1": 0.99,
+      "false_positive_rate": 0.0067,
+      "false_negative_rate": 0.0133,
+      "confusion_matrix": {
+        "tn": 298,
+        "fp": 2,
+        "fn": 4,
+        "tp": 296
+      },
+      "sample_count": 600,
+      "inference_latency_ms_per_sample": 0.0166,
+      "roc_auc": 0.9967,
+      "pr_auc": 0.9976,
+      "train_duration_s": 0.485
+    }
+  },
+  "validation_comparison": {
+    "LogisticRegression": {
+      "accuracy": 0.995,
+      "precision": 1.0,
+      "recall": 0.99,
+      "f1": 0.995,
+      "false_positive_rate": 0.0,
+      "false_negative_rate": 0.01,
+      "confusion_matrix": {
+        "tn": 300,
+        "fp": 0,
+        "fn": 3,
+        "tp": 297
+      },
+      "sample_count": 600,
+      "inference_latency_ms_per_sample": 0.0048,
+      "roc_auc": 0.9973,
+      "pr_auc": 0.998,
+      "train_duration_s": 0.025
+    },
+    "DecisionTree": {
+      "accuracy": 0.995,
+      "precision": 1.0,
+      "recall": 0.99,
+      "f1": 0.995,
+      "false_positive_rate": 0.0,
+      "false_negative_rate": 0.01,
+      "confusion_matrix": {
+        "tn": 300,
+        "fp": 0,
+        "fn": 3,
+        "tp": 297
+      },
+      "sample_count": 600,
+      "inference_latency_ms_per_sample": 0.0046,
+      "roc_auc": 0.995,
+      "pr_auc": 0.9962,
+      "train_duration_s": 0.017
+    },
+    "RandomForest": {
+      "accuracy": 0.9933,
+      "precision": 1.0,
+      "recall": 0.9867,
+      "f1": 0.9933,
+      "false_positive_rate": 0.0,
+      "false_negative_rate": 0.0133,
+      "confusion_matrix": {
+        "tn": 300,
+        "fp": 0,
+        "fn": 4,
+        "tp": 296
+      },
+      "sample_count": 600,
+      "inference_latency_ms_per_sample": 0.0781,
+      "roc_auc": 0.9977,
+      "pr_auc": 0.9986,
+      "train_duration_s": 0.36
+    },
+    "ExtraTrees": {
+      "accuracy": 0.9967,
+      "precision": 1.0,
+      "recall": 0.9933,
+      "f1": 0.9967,
+      "false_positive_rate": 0.0,
+      "false_negative_rate": 0.0067,
+      "confusion_matrix": {
+        "tn": 300,
+        "fp": 0,
+        "fn": 2,
+        "tp": 298
+      },
+      "sample_count": 600,
+      "inference_latency_ms_per_sample": 0.0983,
+      "roc_auc": 0.9984,
+      "pr_auc": 0.9989,
+      "train_duration_s": 0.264
+    },
+    "HistGradientBoosting": {
+      "accuracy": 0.99,
+      "precision": 0.9933,
+      "recall": 0.9867,
+      "f1": 0.99,
+      "false_positive_rate": 0.0067,
+      "false_negative_rate": 0.0133,
+      "confusion_matrix": {
+        "tn": 298,
+        "fp": 2,
+        "fn": 4,
+        "tp": 296
+      },
+      "sample_count": 600,
+      "inference_latency_ms_per_sample": 0.0166,
+      "roc_auc": 0.9967,
+      "pr_auc": 0.9976,
+      "train_duration_s": 0.485
+    }
+  },
+  "test": {
+    "accuracy": 0.995,
+    "precision": 1.0,
+    "recall": 0.99,
+    "f1": 0.995,
+    "false_positive_rate": 0.0,
+    "false_negative_rate": 0.01,
+    "confusion_matrix": {
+      "tn": 300,
+      "fp": 0,
+      "fn": 3,
+      "tp": 297
+    },
+    "sample_count": 600,
+    "inference_latency_ms_per_sample": 0.0956,
+    "roc_auc": 0.9989,
+    "pr_auc": 0.9991
+  },
+  "test_metrics": {
+    "accuracy": 0.995,
+    "precision": 1.0,
+    "recall": 0.99,
+    "f1": 0.995,
+    "false_positive_rate": 0.0,
+    "false_negative_rate": 0.01,
+    "confusion_matrix": {
+      "tn": 300,
+      "fp": 0,
+      "fn": 3,
+      "tp": 297
+    },
+    "sample_count": 600,
+    "inference_latency_ms_per_sample": 0.0956,
+    "roc_auc": 0.9989,
+    "pr_auc": 0.9991
+  },
+  "baseline_comparison": {
+    "baseline_heuristic": {
+      "detector": "CyberShield Heuristic Rule-Based Engine (Baseline)",
+      "accuracy": 0.52,
+      "precision": 1.0,
+      "recall": 0.04,
+      "f1": 0.0769,
+      "false_positive_rate": 0.0,
+      "false_negative_rate": 0.96,
+      "roc_auc": 0.52,
+      "note": "Evaluated on held-out 300-sample PhiUSIIL benchmark"
+    },
+    "improved_ml_model": {
+      "model_name": "ExtraTrees",
+      "accuracy": 0.995,
+      "precision": 1.0,
+      "recall": 0.99,
+      "f1": 0.995,
+      "roc_auc": 0.9989,
+      "false_positive_rate": 0.0,
+      "false_negative_rate": 0.01
+    },
+    "gain": {
+      "accuracy_delta": 0.475,
+      "recall_delta": 0.95,
+      "f1_delta": 0.9181,
+      "fn_reduction": 0.95
+    }
+  },
+  "feature_importances": {
+    "is_https": 0.4537,
+    "path_depth": 0.1056,
+    "num_slashes": 0.1045,
+    "ratio_digits_url": 0.0406,
+    "ratio_digits_host": 0.0342,
+    "path_length": 0.0315,
+    "suspicious_tld": 0.0237,
+    "url_length": 0.0231,
+    "num_digits_host": 0.0218,
+    "num_hyphens_url": 0.0211,
+    "num_subdomains": 0.0198,
+    "entropy_url": 0.0192,
+    "num_hyphens_host": 0.019,
+    "hostname_length": 0.0149,
+    "num_digits_url": 0.0142,
+    "num_dots_url": 0.0141,
+    "entropy_host": 0.0138,
+    "num_dots": 0.0135,
+    "n_keywords": 0.0043,
+    "n_keywords_host": 0.0034,
+    "query_length": 0.0014,
+    "brand_in_subdomain": 0.0012,
+    "has_at_symbol": 0.0007,
+    "num_underscores": 0.0004,
+    "is_shortener": 0.0002,
+    "has_percent": 0.0001,
+    "is_ip_host": 0.0,
+    "has_punycode": 0.0,
+    "has_port": 0.0,
+    "has_tilde": 0.0
+  },
+  "features": [
+    "url_length",
+    "hostname_length",
+    "num_dots",
+    "num_subdomains",
+    "is_ip_host",
+    "has_at_symbol",
+    "is_https",
+    "is_shortener",
+    "num_hyphens_host",
+    "has_punycode",
+    "num_digits_host",
+    "n_keywords",
+    "query_length",
+    "path_depth",
+    "has_port",
+    "path_length",
+    "num_dots_url",
+    "num_hyphens_url",
+    "num_underscores",
+    "num_slashes",
+    "num_digits_url",
+    "ratio_digits_host",
+    "ratio_digits_url",
+    "has_tilde",
+    "has_percent",
+    "entropy_host",
+    "entropy_url",
+    "n_keywords_host",
+    "brand_in_subdomain",
+    "suspicious_tld"
+  ],
+  "methodology": "Leakage-resistant stratified 60/20/20 split; StandardScaler fit on train only; selection via validation F1; single independent test evaluation."
+}

@@ -25,7 +25,7 @@ def test_flow_and_isolation():
         assert c.get("/api/v1/scans").status_code == 401
         a, b = auth(c, "alice"), auth(c, "bob")
         r = c.post("/api/v1/scans/url", json={"url": "http://bit.ly/verify-account"}, headers=a)
-        assert r.status_code == 201 and "heuristic" in r.json()["mode"]
+        assert r.status_code == 201 and ("heuristic" in r.json()["mode"] or "trained ML model" in r.json()["mode"])
         sid = r.json()["id"]
         assert c.get(f"/api/v1/scans/{sid}", headers=a).status_code == 200
         assert c.get(f"/api/v1/scans/{sid}", headers=b).status_code == 404

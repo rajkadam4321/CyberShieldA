@@ -1,0 +1,2 @@
+dataset_name,source_url,retrieval_date,total_samples,phishing_count,legitimate_count,label_mapping,preprocessing
+PhiUSIIL Phishing URL Dataset (Research Corpus),https://raw.githubusercontent.com/elaaatif/DATA-MINING-PhiUSIIL-Phishing-URL/main/PhiUSIIL_Phishing_URL_Dataset.csv,2026-10-16T07:08:24.717630+00:00,3000,1500,1500,"PhiUSIIL raw label 0 -> phishing, label 1 -> legitimate","Deduplicated, filtered valid HTTP/HTTPS URLs, balanced stratified split"

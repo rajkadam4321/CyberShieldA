@@ -1,0 +1,16 @@
+test_id,test_description,method,endpoint,expected_status,actual_status,expected_behavior,status,response_excerpt
+SEC-01,User Registration - Valid,POST,/auth/register,201,201,Account created with status 201,PASS,Success response received
+SEC-02,User Registration - Duplicate Conflict,POST,/auth/register,409,409,Rejects duplicate with HTTP 409 Conflict,PASS,"{""detail"":""Username already taken""}"
+SEC-03,User Registration - Short Username,POST,/auth/register,422,422,Rejects invalid length with HTTP 422 Unprocessable,PASS,"{""detail"":[{""type"":""string_too_short"",""loc"":[""body"",""username""],""msg"":""String should have at least 3"
+SEC-04,User Registration - Disallowed Characters,POST,/auth/register,422,422,Rejects regex violations with HTTP 422,PASS,"{""detail"":[{""type"":""value_error"",""loc"":[""body"",""username""],""msg"":""Value error, Use letters, digits, "
+SEC-05,User Registration - Short Password,POST,/auth/register,422,422,Enforces minimum 8 chars with HTTP 422,PASS,"{""detail"":[{""type"":""string_too_short"",""loc"":[""body"",""password""],""msg"":""String should have at least 8"
+SEC-06,Authentication - Valid Login,POST,/auth/login,200,200,Returns JWT bearer token,PASS,Success response received
+SEC-07,Authentication - Wrong Password,POST,/auth/login,401,401,Rejects invalid credentials with HTTP 401,PASS,"{""detail"":""Wrong username or password""}"
+SEC-08,Authorization - Missing JWT Token,GET,/users/me,401,401,Rejects unauthenticated request with HTTP 401,PASS,"{""detail"":""Invalid or missing token""}"
+SEC-09,Authorization - Malformed JWT Token,GET,/users/me,401,401,Rejects corrupted signature with HTTP 401,PASS,"{""detail"":""Invalid or missing token""}"
+SEC-10,URL Input Validation - Missing Scheme,POST,/scans/url,422,422,Rejects URL without http/https scheme with HTTP 422,PASS,"{""detail"":""URL must start with http:// or https://""}"
+SEC-11,URL Input Validation - Length Boundary,POST,/scans/url,422,422,Rejects oversized URLs exceeding 2048 chars,PASS,"{""detail"":""URL is too long (max 2048 characters)""}"
+SEC-12,URL Input Validation - Space Injection,POST,/scans/url,422,422,Rejects URLs containing whitespace,PASS,"{""detail"":""URL has no valid hostname""}"
+SEC-13,File Upload - Empty File Handling,POST,/scans/file,422,422,Rejects 0-byte file upload with HTTP 422,PASS,"{""detail"":[{""type"":""missing"",""loc"":[""body"",""file""],""msg"":""Field required"",""input"":null}]}"
+SEC-14,Object-Level Access Control (IDOR),GET,/scans/999999/report.pdf,404,404,Returns 404 Not Found preventing cross-tenant information disclosure,PASS,"{""detail"":""Scan not found""}"
+SEC-15,Data Export Privacy,GET,/scans/export.csv,200,200,Exports only current authenticated user's scan history as CSV,PASS,Success response received

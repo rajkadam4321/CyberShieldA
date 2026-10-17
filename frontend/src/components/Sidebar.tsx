@@ -6,12 +6,14 @@ interface SidebarProps {
 }
 
 const navItems: { key: string; icon: string; label: string }[] = [
-  { key: "dash",   icon: "📊", label: "Dashboard"     },
-  { key: "url",    icon: "🔗", label: "URL Scanner"   },
-  { key: "file",   icon: "📁", label: "File Analyzer" },
-  { key: "hist",   icon: "📋", label: "History"       },
-  { key: "quiz",   icon: "🎓", label: "Awareness"     },
-  { key: "me",     icon: "👤", label: "Profile"       },
+  { key: "dash",   icon: "📊", label: "Dashboard"       },
+  { key: "sys",    icon: "🖥️", label: "System Scanner"  },
+  { key: "url",    icon: "🔗", label: "URL Scanner"     },
+  { key: "file",   icon: "📁", label: "File Analyzer"   },
+  { key: "eval",   icon: "📈", label: "Model Benchmark" },
+  { key: "hist",   icon: "📋", label: "History"         },
+  { key: "quiz",   icon: "🎓", label: "Awareness"       },
+  { key: "me",     icon: "👤", label: "Profile"         },
 ];
 
 export default function Sidebar({ page, onNav, username, onLogout }: SidebarProps) {

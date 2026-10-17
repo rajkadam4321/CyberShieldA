@@ -64,12 +64,16 @@ export default function Dashboard({ open }: DashboardProps) {
           <h3 className="mb-3 text-sm font-semibold uppercase tracking-wider text-slate-400">Scan Types</h3>
           <div className="flex items-center gap-6">
             <div className="text-center">
-              <p className="text-3xl font-bold text-cyan-300">{d.url}</p>
+              <p className="text-3xl font-bold text-cyan-300">{d.url ?? 0}</p>
               <p className="text-xs text-slate-500">URL</p>
             </div>
             <div className="text-center">
-              <p className="text-3xl font-bold text-purple-300">{d.file}</p>
+              <p className="text-3xl font-bold text-purple-300">{d.file ?? 0}</p>
               <p className="text-xs text-slate-500">File</p>
+            </div>
+            <div className="text-center">
+              <p className="text-3xl font-bold text-emerald-400">{d.system ?? 0}</p>
+              <p className="text-xs text-slate-500">System</p>
             </div>
           </div>
         </div>
