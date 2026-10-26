@@ -147,7 +147,8 @@ Run the complete test suite (17 automated unit and integration tests):
 
 ```powershell
 cd backend
-python -m pytest -v
+python -m pytest -v --junitxml=test_results.xml
+python generate_test_report_pdf.py
 ```
 
 Test coverage includes:
@@ -177,6 +178,7 @@ All experimental data, baseline vs improved metrics, confusion matrices, and the
 | File | Description |
 |---|---|
 | `CyberShield_Research_Paper_Experimental_Results.pdf` | Comprehensive IEEE-format experimental results paper |
+| `CyberShield_Test_Report.pdf` | Automated test suite execution & verification report (17/17 passed) |
 | `model_metrics.json` | Full empirical metrics (Accuracy, F1, ROC-AUC, FPR, FNR, latencies) |
 | `confusion_matrix.png` | High-resolution visual confusion matrix |
 | `latency_performance.png` | Component processing and inference latency benchmark chart |
